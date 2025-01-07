@@ -24,7 +24,7 @@ class DbFeel extends GetView<PageLogic>{
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.glqe.value)),
+              url: WebUri.uri(Uri.parse(controller.xacjtznr.value)),
             ),
             onWebViewCreated: (c) {
               controller.webViewController = c;

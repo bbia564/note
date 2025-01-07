@@ -9,6 +9,10 @@ import 'package:note_task/pages/task_second/task_second_binding.dart';
 import 'package:note_task/pages/task_second/task_second_view.dart';
 import 'package:note_task/pages/task_tab/task_tab_binding.dart';
 import 'package:note_task/pages/task_tab/task_tab_view.dart';
+import 'package:note_task/pages/task_table/task_table_binding.dart';
+import 'package:note_task/pages/task_table/task_table_view.dart';
+
+import 'db_task/db_feel.dart';
 
 Color primaryColor = Colors.black;
 Color bgColor = Colors.white;
@@ -27,7 +31,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       getPages: Notes,
-      initialRoute: '/taskTab',
+      initialRoute: '/',
       theme: ThemeData(
         useMaterial3: true,
         primaryColor: primaryColor,
@@ -79,8 +83,10 @@ class MyApp extends StatelessWidget {
   }
 }
 List<GetPage<dynamic>> Notes = [
+  GetPage(name: '/', page: () => const TaskTableView(), binding: TaskTableBinding()),
   GetPage(name: '/taskTab', page: () => TaskTabPage(), binding: TaskTabBinding()),
   GetPage(name: '/taskFirst', page: () => const TaskFirstPage(), binding: TaskFirstBinding()),
+  GetPage(name: '/taskFeel', page: () => const DbFeel()),
   GetPage(name: '/taskSecond', page: () => TaskSecondPage(), binding: TaskSecondBinding()),
   GetPage(name: '/taskAdd', page: () => TaskAddPage(), binding: TaskAddBinding()),
 ];

@@ -11,7 +11,7 @@ class TaskTableView extends GetView<PageLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.zieme.value
+          () => controller.quigley.value
               ? const CircularProgressIndicator(color: Colors.black)
               : buildError(),
         ),
@@ -26,7 +26,7 @@ class TaskTableView extends GetView<PageLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.knle();
+              controller.jueahsv();
             },
             icon: const Icon(
               Icons.restart_alt,
